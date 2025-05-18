@@ -1,0 +1,47 @@
+
+# Aprendizado: Comando /listarmodulos
+Data: 16/05/2025 03:44
+
+## Objetivo
+Você deve criar um **módulo local** que permita listar todos os arquivos Python da pasta `modules/`. 
+Esse comando é útil para o usuário visualizar os módulos disponíveis que podem ser usados, editados ou excluídos.
+
+---
+
+## O que você deve fazer:
+
+### 1. Crie o módulo chamado `listar_modulos.py` dentro da pasta `modules/`.
+
+### 2. Dentro desse módulo, crie a função `mostrar_modulos()` com o seguinte comportamento:
+- Percorra recursivamente a pasta `modules/`
+- Pegue todos os arquivos `.py` (exceto `__init__.py`)
+- Retorne uma string no seguinte formato:
+
+Exemplo de saída:
+```
+📦 Módulos encontrados:
+- auto_learn
+- limpador_memoria
+- status_memoria
+```
+
+---
+
+### 3. Registre o comando para que o usuário possa usar no chat:
+```python
+registrar_comando("/listarmodulos", "listar_modulos", "mostrar_modulos")
+```
+
+---
+
+## Restrições importantes:
+- ❌ Não utilize bibliotecas como `discord`, `FastAPI`, `telegram`, etc.
+- ✅ Use somente `os.walk`, `os.path`, e recursos nativos do Python.
+- ✅ O módulo deve funcionar 100% em um ambiente local.
+- ✅ A resposta no chat deve vir formatada como texto simples.
+- ✅ O nome da função precisa ser exatamente: `mostrar_modulos`
+
+---
+
+## Observação Final
+Você é um assistente local e modular. Sua função é criar módulos úteis e registrá-los com comandos para facilitar a automação do sistema.
